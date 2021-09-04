@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import PokemonThumbnail from './components/PokemonThumbnails';
+import Button from '@material-ui/core/Button';
 
 function App() {
   const [allPokemons, setAllPokemons] = useState([]);
@@ -44,7 +45,7 @@ function App() {
             />
           )}
         </div>
-        <button className="load-more" onClick={() => getAllPokemons()}>Load more</button>
+        <Button className="load-more" onClick={() => getAllPokemons()} color="primary" variant="contained">Load more</Button>
       </div>
     </div>
   );
